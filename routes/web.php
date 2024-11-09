@@ -7,6 +7,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', function() {
-    return view('hai');
-});
+// Route::get('/', function() {
+//     return view('hai');
+// });

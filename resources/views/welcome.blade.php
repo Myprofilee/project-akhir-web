@@ -7,8 +7,15 @@
     <link rel="icon" type="image/svg+xml" href="/Assets/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    {{-- <style>
+      #counter{
+        font-family: fantasy;
+        
+      }
+    </style> --}}
 </head>
-<body class="bg-dark">
+<body class="bg-black">
     {{-- NAVBAR --}}
     @include('navbar')
 
@@ -43,10 +50,113 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+    </div>
+
+    {{-- jackpot gif --}}
+    <div class="container text-center mt-5">
+      <div class="position-relative">
+          <img src="{{ asset('images/jackpot.gif') }}" class="img-fluid" alt="Animated GIF">
+          <div id="counter" class="position-absolute top-50 start-50 translate-middle mt-3 mt-md-3 mt-lg-4 text-light fs-1 fs-md-2" style="font-family: fantasy">
+              IDR <span id="count">0</span>
+          </div>
       </div>
+    </div>
+
+    {{-- pembayaran --}}
+    <div class="container mt-5 p-3 rounded-4 border border-3 border-primary" style="background-color: black">
+      <div class="row g-2 text-light">
+        <div class="border-bottom border-3">
+          <h1>Sistem Pembayaran</h1>
+        </div>
+          <div class="col-md-2">
+              <div class="card text-center btn btn-dark" type="button">
+                  <div class="image">
+                      <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/gopay_color.webp" height="50" width="70">
+                  </div>
+              </div>
+              <div class="container">
+                <h5 class="text-center">Gopay</h5>
+              </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card text-center btn btn-dark" type="button">
+                <div class="image">
+                    <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/bank/shopeepay.webp" height="50" width="70">
+                </div>
+            </div>
+            <div class="container">
+              <h5 class="text-center">Shopee Pay</h5>
+            </div>
+        </div>
+        <div class="col-md-2">
+          <div class="card text-center btn btn-dark" type="button">
+              <div class="image">
+                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/dana.webp" height="50" width="70">
+              </div>
+          </div>
+          <div class="container">
+            <h5 class="text-center">Dana</h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="card text-center btn btn-dark" type="button">
+              <div class="image">
+                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/qris.webp" height="50" width="70">
+              </div>
+          </div>
+          <div class="container">
+            <h5 class="text-center">Qris</h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="card text-center btn btn-dark" type="button">
+              <div class="image">
+                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/ovo.webp" height="50" width="70">
+              </div>
+          </div>
+          <div class="container">
+            <h5 class="text-center">OVO</h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="card text-center btn btn-dark" type="button">
+              <div class="image">
+                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/gopay_color.webp" height="50" width="70">
+              </div>
+          </div>
+          <div class="container">
+            <h5 class="text-center">Sea Bank</h5>
+          </div>
+        </div>
+          
+        <div class="col-md-2">
+          <div class="card text-center btn btn-dark" type="button">
+              <div class="image">
+                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/bank/bca.webp" height="50" width="70">
+              </div>
+          </div>
+          <div class="container">
+            <h5 class="text-center">Bank Bca</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let count = 1000000; // Initialize the counter
     
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        // Function to update the counter
+        function updateCounter() {
+            count++; // Increment the counter
+            document.getElementById('count').innerText = count.toLocaleString('id-ID'); // Format ke mata uang
+        }
+    
+        // Update the counter every second
+        setInterval(updateCounter, 100);
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 </body>
 </html>
