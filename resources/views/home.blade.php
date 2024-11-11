@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Slot</title>
-    <link rel="icon" type="image/svg+xml" href="/Assets/logo.png">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
@@ -61,6 +61,41 @@
           </div>
       </div>
     </div>
+    
+    {{-- CARD berbagai Game --}}
+    <div class="container mt-5 p-3 rounded-4 border border-3 border-primary" style="background-color: #00043c">
+      <h1 class="text-center mb-3 text-light">Games</h1>
+      <div class="row justify-content-center">
+        <div class="col-auto mb-4">
+          <div class="card rounded-4 border border-3 border-dark" style="width: 18rem; background-color: #2b0b70">
+            <img src="https://res.cloudinary.com/rey0303/image/upload/v1727615283/judibola.xyz_dpavqm.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-light">Sport Bet</h5>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto mb-4">
+          <div class="card rounded-4 border border-3 border-dark" style="width: 18rem; background-color: #2b0b70">
+            <img src="https://img.viva88athenae.com/pp/images/vs5triple8gold.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-light">Slot</h5>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto mb-4">
+          <div class="card rounded-4 border border-3 border-dark" style="width: 18rem; background-color: #2b0b70">
+            <img src="https://img.viva88athenae.com/mg/images/smg_treasurestacks_icon_square_250x250_en.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-light">Gambling</h5>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     {{-- pembayaran --}}
     <div class="container mt-5 p-3 rounded-4 border border-3 border-primary" style="background-color: black">
@@ -141,6 +176,8 @@
         </div>
       </div>
     </div>
+
+    @include('footer')
 
     <script>
         let count = 1000000; // Initialize the counter
