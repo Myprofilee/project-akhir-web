@@ -55,11 +55,7 @@
     {{-- jackpot gif --}}
     <div class="container text-center mt-5">
       <div class="position-relative">
-<<<<<<< HEAD
           <img src="{{ asset('images/jackpot.gif') }}" class="img-fluid mt-3" alt="Animated GIF">
-=======
-          <img src="{{ asset('images/jackpot.gif') }}" class="img-fluid" alt="Animated GIF">
->>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
           <div id="counter" class="position-absolute top-50 start-50 translate-middle mt-3 mt-md-3 mt-lg-4 text-light fs-1 fs-md-2" style="font-family: fantasy">
               IDR <span id="count">0</span>
           </div>
@@ -75,11 +71,7 @@
             <img src="https://res.cloudinary.com/rey0303/image/upload/v1727615283/judibola.xyz_dpavqm.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Sport Bet</h5>
-<<<<<<< HEAD
               <a href="/game/sport-bet" class="btn btn-primary">Go somewhere</a>
-=======
-              <a href="#" class="btn btn-primary">Go somewhere</a>
->>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
             </div>
           </div>
         </div>
