@@ -40,7 +40,10 @@
                 <p><i class="fas fa-envelope mr-3"></i> EvanxStorm@gmail.com</p>
                 <p><i class="fas fa-phone mr-3"></i> +62 857-4880-5799 (Andre)</p>
                 <p><i class="fas fa-print mr-3"></i> +62 882-3598-6580 (Patrick)</p>
+<<<<<<< HEAD
                 <p><i class="fas fa-print mr-3"></i> +62 895-0543-3388 (Albertus)</p>
+=======
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
               </div>
               <!-- Grid column -->
     
@@ -110,6 +113,7 @@
     
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: #00043c">
+<<<<<<< HEAD
           &copy; 2024 - <span id="year"></span> Urban Slot  Copyright
           <a class="text-white" href="https://UrbanSlot.com/">UrbanSlot.com</a>. All Rights Reserved.
         </div>
@@ -121,3 +125,11 @@
         // JavaScript to update the year automatically
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+=======
+          © 2024 Copyright:
+          <a class="text-white" href="https://UrbanSlot.com/">UrbanSlot.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5

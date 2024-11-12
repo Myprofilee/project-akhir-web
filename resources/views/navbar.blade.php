@@ -18,6 +18,10 @@
           <div class="col-md-4 mt-2">
             <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
               <input autocomplete="off" type="search" class="form-control " placeholder="Search" />
+<<<<<<< HEAD
+=======
+              <span class="input-group-text border-0 d-none d-lg-flex"><i class="bi-search"></i></span>
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
             </form>
           </div>
           <!-- search elements -->
@@ -45,20 +49,30 @@
                   </li>
                 </ul> --}}
               </div>
+<<<<<<< HEAD
 
               
               <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary justify-content-end" data-mdb-ripple-color="dark" type="button">
                 Download app<i class="fas fa-download ms-2"></i>
               </button>
+=======
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
   
               {{-- <!-- User -->
               <div class="dropdown">
                 <a data-mdb-dropdown-init class="text-reset dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                   id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+<<<<<<< HEAD
                   <img src="{{ asset('images/logo.png') }}" class="rounded-circle" height="22"
                     alt="" loading="lazy" />
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="navbarDropdownMenuLink">
+=======
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+                    alt="" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
                   <li><a class="dropdown-item" href="#">My profile</a></li>
                   <li><a class="dropdown-item" href="#">Settings</a></li>
                   <li><a class="dropdown-item" href="#">Logout</a></li>
@@ -72,6 +86,7 @@
     </div>
     <!-- Jumbotron -->
   
+<<<<<<< HEAD
     
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="dark" style="background-color: #2b0b70">
@@ -90,6 +105,20 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto">
+=======
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="dark" style="background-color: #2b0b70">
+      <!-- Container wrapper -->
+      <div class="container justify-content-center justify-content-md-between">
+        <!-- Left links -->
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item me-2 me-lg-0">
+            {{-- <a class="nav-link" role="button" data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1"
+              data-mdb-ripple-init class="btn shadow-0 p-0 me-3" aria-controls="#sidenav-1" aria-haspopup="true">
+              <i class="fas fa-bars me-1"></i>
+              <span>Kategori</span>
+            </a> --}}
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
             <div class="dropdown">
               <a class="nav-link dropsown-toggle" role="button" data-bs-toggle="dropdown">
                 <span>Kategori</span>
@@ -100,6 +129,7 @@
                 <li><button class="dropdown-item" type="button">Sport Bet</button></li>
               </ul>
             </div>
+<<<<<<< HEAD
             <li class="nav-item active">
               <a class="nav-link" href="#">Berita</a>
             </li>
@@ -116,11 +146,35 @@
                   
         </div>
 
+=======
+          </li>
+          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+            <a class="nav-link" href="#">Berita</a>
+          </li>
+          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+            <a class="nav-link" href="#">Promo</a>
+          </li>
+          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+            <a class="nav-link" href="#">Tentang Kami</a>
+          </li>
+          <li class="nav-item me-2 me-lg-0 d-none d-md-inline-block">
+            <a class="nav-link" href="#">Hubungi Kami</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+  
+        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary" data-mdb-ripple-color="dark" type="button">
+          Download app<i class="fas fa-download ms-2"></i>
+        </button>
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
       </div>
       <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
+<<<<<<< HEAD
      
+=======
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
   
     {{-- <!-- Sidenav -->
     <div id="sidenav-1" data-mdb-sidenav-init class="sidenav" role="navigation" data-mdb-hidden="true" data-mdb-accordion="true">
@@ -239,5 +293,9 @@
     </div>
     <!-- Background image --> --}}
   </header>
+<<<<<<< HEAD
   <!--Main Navigation-->
   
+=======
+  <!--Main Navigation-->
+>>>>>>> 7a867ebb5eb7ae55bb69d0059457f493017a69f5
