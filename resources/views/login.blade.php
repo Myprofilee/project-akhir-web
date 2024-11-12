@@ -37,9 +37,9 @@
                 <div class="text-center">
                     <button type="submit" class="btn btn-color px-5 mb-5 w-100 text-light" style="background-color: #2b0b70" >Login</button>
                 </div>
-                <div id="emailHelp" class="form-text text-center mb-5 text-dark">
+                <div class="form-text text-center mb-5 text-dark">
                   Tidak terdaftar? 
-                  <a href="#" class="text-dark fw-bold"> Buat Akun</a>
+                  <a href="{{ route('register') }}" class="text-dark fw-bold"> Buat Akun</a>
                 </div>
               </form>
             </div>
