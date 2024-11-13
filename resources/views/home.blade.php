@@ -184,7 +184,7 @@
     
         // Function to update the counter
         function updateCounter() {
-            count++; // Increment the counter
+            count++;     // Increment the counter
             document.getElementById('count').innerText = count.toLocaleString('id-ID'); // Format ke mata uang
         }
     

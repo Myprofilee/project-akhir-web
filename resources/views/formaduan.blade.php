@@ -32,7 +32,7 @@
                         
                         {{-- input username --}}
                         <div class="mb-3 mt-5">
-                            <input type="text" class="form-control" id="Username" placeholder="User Name">
+                            <input type="text" class="form-control" id="Username" placeholder="User Name" required>
                         </div>
 
                         {{-- Kepada siapa --}}

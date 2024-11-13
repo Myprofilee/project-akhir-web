@@ -17,6 +17,7 @@
             <div class="card my-5">
                 {{-- sementara agar halaman home dpt diakses pake action dan get method --}}
               <form class="card-body cardbody-color p-lg-5" action="{{ route('home') }}" method="GET">
+                @csrf
                 
                 {{-- logo --}}
                 <div class="text-center">
@@ -27,11 +28,11 @@
                 {{-- input username --}}
                 <div class="mb-3">
                   <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
-                    placeholder="User Name">
+                    placeholder="User Name" required>
                 </div>
                 {{-- input password --}}
                 <div class="mb-3">
-                  <input type="password" class="form-control" id="password" placeholder="password">
+                  <input type="password" class="form-control" id="password" placeholder="password" required minlength="8" maxlength="15">
                 </div>
                 {{-- tombol login --}}
                 <div class="text-center">

@@ -15,7 +15,8 @@
                 <h2 class="text-center text-light mt-5">Register Form</h2>
                 <div class="card my-5">
                     {{-- sementara agar halaman home dpt diakses pake action dan get method --}}
-                    <form class="card-body cardbody-color p-lg-5" action="{{ route('home') }}" method="GET">
+                    <form class="card-body cardbody-color p-lg-5" action="{{ route('home') }}" method="GET" id="registrationForm">
+                        @csrf
                         
                         {{-- logo --}}
                         <div class="text-center">
@@ -25,32 +26,32 @@
                         
                         {{-- input username --}}
                         <div class="mb-3 mt-5">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name">
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name" required>
                         </div>
 
                         {{-- input password --}}
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="password" placeholder="password">
+                            <input type="password" class="form-control" id="password" placeholder="password" required minlength="8" maxlength="15">
                         </div>
 
                         {{-- Konfirmasi password --}}
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="password" placeholder="Konfirmasi password">
+                            <input type="password" class="form-control" id="konfirmasi_password" placeholder="Konfirmasi password" required >
                         </div>
 
                         {{-- input Nomor tel --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nomor Telp">
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nomor Telp" required>
                         </div>
 
                         {{-- input rekening bank --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="No Rekening Bank">
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="No Rekening Bank" required>
                         </div>
 
                         {{-- input nama rekening bank --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nama Rekening Bank">
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nama Rekening Bank" required>
                         </div>
 
                         {{-- input Email --}}
@@ -68,6 +69,24 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah form dari submit otomatis
+
+            // Mengambil nilai dari form password
+            var password = document.getElementById("password").value;
+            // mengambil nilai dari form konfirmasi password
+            var konfirmasiPassword = document.getElementById("konfirmasi_password").value;
+
+            // Mengecek apakah password dan konfirmasi password cocok
+            if (password !== konfirmasiPassword) {
+                alert("Password dan konfirmasi password tidak cocok!");
+            } else {
+                alert("Password dan konfirmasi password cocok!");
+                this.submit(); // Submit form jika password dan konfirmasi pass cocok
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
