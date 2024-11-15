@@ -7,13 +7,14 @@
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo.png') }}">
     <title>Daftar Akun</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/Css_khusus.css') }}">
 </head>
-<body style="background-color: #00043c">
+<body class="bg-pan-left">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h2 class="text-center text-light mt-5">Register Form</h2>
-                <div class="card my-5">
+                <h2 class="text-center mt-5 text-flicker-in-glow">Registration Form</h2>
+                <div class="card my-5" style="background-color: whitesmoke">
                     {{-- sementara agar halaman home dpt diakses pake action dan get method --}}
                     <form class="card-body cardbody-color p-lg-5" action="{{ route('home') }}" method="GET" id="registrationForm">
                         @csrf
@@ -41,12 +42,12 @@
 
                         {{-- input Nomor tel --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nomor Telp" required>
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nomor Telp" required minlength="8" maxlength="12">
                         </div>
 
                         {{-- input rekening bank --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="No Rekening Bank" required>
+                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="No Rekening Bank" required minlength="10" maxlength="16">
                         </div>
 
                         {{-- input nama rekening bank --}}

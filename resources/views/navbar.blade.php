@@ -23,11 +23,6 @@
           <!-- Right elements -->
           <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
-              <!-- Cart -->
-              {{-- <a class="text-reset me-3" href="#">
-                <span><i class="fas fa-shopping-cart"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger">1</span>
-              </a> --}}
   
               <!-- Notification -->
               <div class="dropdown">
@@ -90,16 +85,16 @@
                 <span>Kategori</span>
               </a>
               <ul class="dropdown-menu">
-                <li><button class="dropdown-item" type="button">Arcade</button></li>
-                <li><button class="dropdown-item" type="button">Loterry</button></li>
-                <li><button class="dropdown-item" type="button">Sport Bet</button></li>
+                <li><a class="dropdown-item btn" type="button" href="{{ route('gambling') }}">Arcade</a></li>
+                <li><a class="dropdown-item btn" type="button" href="#">Loterry</a></li>
+                <li><a class="dropdown-item btn" type="button" href="{{ route('sport-bet') }}">Sport Bet</a></li>
               </ul>
             </div>
             <li class="nav-item active">
               <a class="nav-link" href="#">Berita</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Promo</a>
+              <a class="nav-link" href="{{ route('promo') }}">Promo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Tentang Kami</a>

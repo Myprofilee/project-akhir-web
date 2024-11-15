@@ -19,8 +19,16 @@ Route::get('hubungikami', function () {
 })->name('hubungikami');
 
 Route::get('game/sport-bet', function () {
-    return view('sport-bet');
+    return view('game/sport-bet');
 })->name('sport-bet');
+
+Route::get('promo', function () {
+    return view('promo');
+})->name('promo');
+
+Route::get('game/gambling', function () {
+    return view('game/gambling');
+})->name('gambling');
 
 // Route::get('/', function() {
 //     return view('hai');

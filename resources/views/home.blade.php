@@ -8,12 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-    {{-- <style>
-      #counter{
-        font-family: fantasy;
-        
-      }
-    </style> --}}
 </head>
 <body class="bg-black">
     {{-- NAVBAR --}}
@@ -71,7 +65,7 @@
             <img src="https://res.cloudinary.com/rey0303/image/upload/v1727615283/judibola.xyz_dpavqm.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Sport Bet</h5>
-              <a href="/game/sport-bet" class="btn btn-primary">Go somewhere</a>
+              <a href="/{{ route('sport-bet') }}" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
@@ -89,7 +83,7 @@
             <img src="https://img.viva88athenae.com/mg/images/smg_treasurestacks_icon_square_250x250_en.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Gambling</h5>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="{{ route('gambling') }}" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>

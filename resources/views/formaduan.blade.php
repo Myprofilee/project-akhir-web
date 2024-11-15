@@ -8,16 +8,16 @@
     <title>Daftar Akun</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="{{ asset('css/Css_khusus.css') }}">
 
 </head>
-<body style="background-color: #00043c">
+<body class="bg-pan-left">
 
     @include('navbar')
 
     <div class="container">
         <div class="row">
-            <h2 class="text-center text-light mt-5">Report Form</h2>
+            <h2 class="text-center  mt-5 text-flicker-in-glow">Report Form</h2>
             <div class=" d-flex justify-content-center align-items-center">
                 
                 <div class="card my-5" style="width: 60rem">
