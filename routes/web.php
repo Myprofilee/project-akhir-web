@@ -30,10 +30,13 @@ Route::get('game/gambling', function () {
     return view('game/gambling');
 })->name('gambling');
 
+<<<<<<< HEAD
 Route::get('game/slot', function () {
     return view('game/slot');
 })->name('slot');
 
+=======
+>>>>>>> 489a9191acdc4b65add20a692c0fad81bfa38fdf
 // Route::get('/', function() {
 //     return view('hai');
 // });

@@ -104,6 +104,12 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('hubungikami') }}">Hubungi Kami</a>
+<<<<<<< HEAD
+=======
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('home') }}">Home</a>
+>>>>>>> 489a9191acdc4b65add20a692c0fad81bfa38fdf
             </li>
           </ul>
                   
