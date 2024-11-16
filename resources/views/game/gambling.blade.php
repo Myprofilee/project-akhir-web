@@ -10,46 +10,14 @@
     <link rel="stylesheet" href="{{ asset('css/Css_khusus.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <style>
-        .box-container {
-            text-align: center;
-            max-width: 300px;
-        }
-        .box {
-            width: 300px;
-            height: 100px;
-            border: 3px solid #444;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 20px;
-        }
+        /* css untuk menggerakan item nya, dengan transform translate x */
         .items {
             display: flex;
-            transform: translateX(0);
+            /* transform: translateX(1); */
             transition: transform 1s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+            white-space: nowrap;
         }
-        .item {
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            color: #222;
-            background-color: #f5c518;
-            margin: 0 5px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #f5c518;
-        }
+
         .open-button {
             padding: 10px 20px;
             background-color: #2b2b70;
@@ -71,49 +39,64 @@
     <div class="container ">
         <h1 class="mt-5 mb-5 text-flicker-in-glow text-center">Gambling Games</h1>
 
-        <div class="box-container mx-auto">
-            <div class="box">
+        <img class="mx-auto d-flex" src="https://images.linkcdn.cloud/global/banner/nex.jpg" alt="">
+
+        <div class="container mx-auto text-center mt-5">
+            <div class="mx-auto bg-black mb-3 d-flex align-items-center justify-content-center overflow-hidden position-relative border border-3" style="height: 150px" >
                 <div class="items" id="items">
-                    <!-- Item images or names -->
-                    <div class="item">Knife</div>
-                    <div class="item">AK-47</div>
-                    <div class="item">M4A1</div>
-                    <div class="item">Pistol</div>
-                    <div class="item">AWP</div>
-                    <div class="item">Sniper</div>
-                    <div class="item">Armor</div>
-                    <div class="item">Grenade</div>
+                    <!-- item gacha -->
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Knife</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">AK-47</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">M4A1</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Pistol</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">AWP</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Sniper</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Armor</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Grenade</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Galil</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">M249</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">RPD</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">MK-2</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Stun</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Smoke</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Karambit</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Butterfly</div>
+                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Defuse</div>
+
                 </div>
             </div>
             <button class="open-button" onclick="openBox()">Open Box</button>
-            <div class="result" id="result">Press "Open Box" to try your luck!</div>
+            <div class="fs-4 fw-bold mt-3" style="color: #f5c518" id="result">Press "Open Box" to try your luck!</div>
         </div>
     </div>
 
     @include('footer')
 
     <script>
+        //berfungsi untuk menggandakan item di dalam items
+        document.addEventListener("DOMContentLoaded", function() {
+            const itemsContainer = document.getElementById("items");
+            const items = itemsContainer.innerHTML; //menyimpan konten html
+            itemsContainer.innerHTML += items ;  // code duplikasinya
+        });
+
         function openBox() {
             const itemsContainer = document.getElementById("items");
             const resultDisplay = document.getElementById("result");
-    
-            // Total number of items
-            const totalItems = document.querySelectorAll(".item").length;
-    
-            // Pick a random item index
-            const randomIndex = Math.floor(Math.random() * totalItems);
-    
-            // Calculate the offset for the random item
-            const offset = randomIndex * -100; // Each item is 100px wide
-    
-            // Set the transformation to simulate spinning
-            itemsContainer.style.transition = "transform 1s ease-in-out";
-            itemsContainer.style.transform = `translateX(${offset}px)`;
-    
-            // Show result after the animation ends
+
+            const totalItems = document.querySelectorAll(".item").length / 2; // menghitung total jumlah item asli
+            const randomIndex = Math.floor(Math.random() * totalItems); 
+            const offset = randomIndex * -80;
+
+            itemsContainer.style.transition = "transform 1s ease-in-out"; //mengatur kecepatan geser
+            itemsContainer.style.transform = `translateX(${offset}px)`; //menggeser item sebanyak offsetnya
+
+            //fungsi untuk menampilkan hasil
             setTimeout(() => {
-                const selectedItem = document.querySelectorAll(".item")[randomIndex].textContent;
+                const selectedItem = document.querySelectorAll(".item")[randomIndex].textContent; //mengambil value dari item yg terpilih secara acak
                 resultDisplay.textContent = `You got: ${selectedItem}`;
+                itemsContainer.style.transition = "none"; // Disable transisi
+                itemsContainer.style.transform = "translateX(0)"; // Reset posisi
             }, 1000);
         }
     </script>

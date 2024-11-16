@@ -20,25 +20,25 @@
             <!-- the cols in this div change the number of cards per row depending on screen size and the mb-4 adds space below cards if they spill over into the next row-->
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card">
-                <img class="card-img-top" src="https://res.cloudinary.com/sepuckett86/image/upload/v1513176680/IMG_5837_xicdt5.jpg" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('images/1.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Bagi seluruh pengguna Urban Slot, kami memberikan gratis biaya admin untuk game kita dalam rangka opening web kami.</p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card">
-                <img class="card-img-top" src="https://res.cloudinary.com/sepuckett86/image/upload/v1513095416/IMG_7240_q9dadh.jpg" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('images/2.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">"Saksikan Live Streaming Sepak Bola Terbaik! Jangan lewatkan aksi seru dari tim favorit Anda di setiap pertandingan besar. Dukung tim jagoan Anda dengan betting sebanyak-banyaknya"</p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card">
-                <img class="card-img-top" src="https://res.cloudinary.com/sepuckett86/image/upload/v1513176676/DSCN2129_copy_cdgcqc.jpg" alt="Card image cap">
+                <img class="card-img-top" src="{{ asset('images/3.png') }}" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This photo is a different size than the first two.</p>
+                  <p class="card-text">Urban slot x GO-Pay ! kami telah bekerjasama dengan pihak gopay untuk memberika cashback bagi mereka yang mengisi saldo dengan GO-Pay</p>
                 </div>
               </div>
             </div>
