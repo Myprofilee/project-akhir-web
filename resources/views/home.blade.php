@@ -150,7 +150,7 @@
         <div class="col-md-2">
           <div class="card text-center btn btn-dark" type="button">
               <div class="image">
-                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/gopay_color.webp" height="50" width="70">
+                  <img src="https://appmanager.seabank.co.id/seamoney/bke/app-manager/live/front_low_code/20230921/ea2515cefe5c4b4cb9e0776003124e0f.png" height="50" width="70">
               </div>
           </div>
           <div class="container">

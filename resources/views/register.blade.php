@@ -80,10 +80,12 @@
             var konfirmasiPassword = document.getElementById("konfirmasi_password").value;
 
             // Mengecek apakah password dan konfirmasi password cocok
-            if (password !== konfirmasiPassword) {
+            if (password !== konfirmasiPassword) 
+            {
                 alert("Password dan konfirmasi password tidak cocok!");
-            } else {
-                alert("Password dan konfirmasi password cocok!");
+            } 
+            else 
+            {
                 this.submit(); // Submit form jika password dan konfirmasi pass cocok
             }
         });

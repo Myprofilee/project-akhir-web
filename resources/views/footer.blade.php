@@ -19,13 +19,13 @@
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Games</h6>
                 <p>
-                  <a class="text-white" href="">Sports Bet</a>
+                  <a class="text-white" href="{{ route('sport-bet') }}">Sports Bet</a>
                 </p>
                 <p>
-                  <a class="text-white" href="">Slot</a>
+                  <a class="text-white" href="{{ route('slot') }}">Slot</a>
                 </p>
                 <p>
-                  <a class="text-white" href="">Gambling</a>
+                  <a class="text-white" href="{{ route('gambling') }}">Gambling</a>
                 </p>
                 <p class="text-white">
                   Coming Soon

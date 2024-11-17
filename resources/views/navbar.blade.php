@@ -12,7 +12,6 @@
               <img src="{{ asset('images/logo dgn tulisan.png') }}" alt=""  height="50">
             </a>
           </div>
-
   
           <!-- Search elements -->
           <div class="col-md-4 mt-2">
