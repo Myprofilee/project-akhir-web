@@ -8,16 +8,9 @@
     <title>Promo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/Css_khusus.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> --}}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <style>
-        /* css untuk menggerakan item nya, dengan transform translate x */
-        .items {
-            display: flex;
-            /* transform: translateX(1); */
-            transition: transform 1s cubic-bezier(0.550, 0.085, 0.680, 0.530);
-            white-space: nowrap;
-        }
-
         .open-button {
             padding: 10px 20px;
             background-color: #2b2b70;
@@ -31,78 +24,181 @@
         .open-button:hover {
             background-color: #4444aa;
         }
+/* 
+        .roulette-wrapper{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        width:100%;
+        margin:0 auto;
+        overflow:hidden;
+        } */
+
+        .selector{
+            width:3px;
+            background:grey;
+            left:50%;
+            height:155px;
+            transform:translate(-50%);
+            position:absolute;
+            z-index:2;
+        }
+
+        .roulette-wrapper .wheel{
+        display:flex;
+        }
+
+        .roulette-wrapper .wheel .kolom{
+        display:flex;
+        }
+
+        .roulette-wrapper .wheel .kolom .card{
+        height:150px;
+        width:200px;
+        margin:3px;
+        border-radius:8px;
+        border-bottom:3px solid rgba(0,0,0,0.2);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-size:1.5em;
+        }
+
+        .roulette-wrapper .wheel .kolom .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card.red{
+        background:#F95146;
+        }
+
+        .card.black{
+        background:#2D3035;
+        }
+
+        .card.green{
+        background:#00C74D;
+        }
+
+        *{
+        box-sizing:border-box;
+        }
     </style>
 </head>
 <body class="bg-pan-left">
     @include('navbar')
 
-    <div class="container ">
+    <div class="container">
         <h1 class="mt-5 mb-5 text-flicker-in-glow text-center">Gambling Games</h1>
-
         <img class="mx-auto d-flex" src="https://images.linkcdn.cloud/global/banner/nex.jpg" alt="">
 
         <div class="container mx-auto text-center mt-5">
-            <div class="mx-auto bg-black mb-3 d-flex align-items-center justify-content-center overflow-hidden position-relative border border-3" style="height: 150px" >
-                <div class="items" id="items">
-                    <!-- item gacha -->
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Knife</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">AK-47</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">M4A1</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Pistol</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">AWP</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Sniper</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Armor</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Grenade</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Galil</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">M249</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">RPD</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">MK-2</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Stun</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Smoke</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Karambit</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Butterfly</div>
-                    <div class="item ms-1 d-flex justify-content-center align-items-center fs-3 text-center text-dark rounded" style="width: 100px; height: 100px; background-color: #f5c518;">Defuse</div>
-
-                </div>
+            <div class="roulette-wrapper p-relative d-flex justify-content-center w-100 overflow-hidden mx-auto" >
+                <div class="selector"></div>
+                <div class="wheel"></div>
             </div>
-            <button class="open-button" onclick="openBox()">Open Box</button>
-            <div class="fs-4 fw-bold mt-3" style="color: #f5c518" id="result">Press "Open Box" to try your luck!</div>
+            <div class="mt-4">
+                <button class="open-button">Spin</button>
+                {{-- <button class="open-button" onclick="resetWheel()">Reset</button> --}}
+                <div class="fs-4 fw-bold mt-3" style="color: #f5c518" id="result">Press "Open Box" to try your luck!</div>
+            </div>
         </div>
     </div>
 
     @include('footer')
 
     <script>
-        //berfungsi untuk menggandakan item di dalam items
-        document.addEventListener("DOMContentLoaded", function() {
-            const itemsContainer = document.getElementById("items");
-            const items = itemsContainer.innerHTML; //menyimpan konten html
-            itemsContainer.innerHTML += items ;  // code duplikasinya
+        $(document).ready(function() {
+            //setup multiple rows of colours, can also add and remove while spinning but overall this is easier.
+            initWheel();
+        
+            $('button').on('click', function(){
+                var outcome = parseInt($('input').val());
+                spinWheel(outcome);
+            });
         });
 
-        function openBox() {
-            const itemsContainer = document.getElementById("items");
-            const resultDisplay = document.getElementById("result");
-
-            const totalItems = document.querySelectorAll(".item").length / 2; // menghitung total jumlah item asli
-            const randomIndex = Math.floor(Math.random() * totalItems); 
-            const offset = randomIndex * -80;
-
-            itemsContainer.style.transition = "transform 1s ease-in-out"; //mengatur kecepatan geser
-            itemsContainer.style.transform = `translateX(${offset}px)`; //menggeser item sebanyak offsetnya
-
-            //fungsi untuk menampilkan hasil
-            setTimeout(() => {
-                const selectedItem = document.querySelectorAll(".item")[randomIndex].textContent; //mengambil value dari item yg terpilih secara acak
-                resultDisplay.textContent = `You got: ${selectedItem}`;
-                itemsContainer.style.transition = "none"; // Disable transisi
-                itemsContainer.style.transform = "translateX(0)"; // Reset posisi
-            }, 1000);
+        function initWheel(){
+            var $wheel = $('.roulette-wrapper .wheel'),
+                row = "";
+            
+                row += "<div class='kolom'>";
+                row += "  <div class='card red'>1<\/div>";
+                row += "  <div class='card black'>14<\/div>";
+                row += "  <div class='card red'>2<\/div>";
+                row += "  <div class='card black'>13<\/div>";
+                row += "  <div class='card red'>3<\/div>";
+                row += "  <div class='card black'>12<\/div>";
+                row += "  <div class='card red'>4<\/div>";
+                row += "  <div class='card green'>0<\/div>";
+                row += "  <div class='card black'>11<\/div>";
+                row += "  <div class='card red'>5<\/div>";
+                row += "  <div class='card black'>10<\/div>";
+                row += "  <div class='card red'>6<\/div>";
+                row += "  <div class='card black'>9<\/div>";
+                row += "  <div class='card red'>7<\/div>";
+                row += "  <div class='card black'>8<\/div>";
+                row += "<\/div>";
+        
+            for(var x = 0; x < 29; x++){
+                $wheel.append(row);
+            }
         }
+
+        function spinWheel(roll) {
+            var $wheel = $('.roulette-wrapper .wheel'),
+                order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4],
+                position = order.indexOf(roll);
+                        
+            // Tentukan posisi tujuan dimana roda akan berhenti
+            var rows = 12,
+                card = 75 + 3 * 2,
+                landingPosition = (rows * 15 * card) + (position * card);
+            
+            // Mengacak posisi untuk memberikan efek acak pada roda
+            var randomize = Math.floor(Math.random() * 75) - (75 / 2);
+            landingPosition = landingPosition + randomize;
+            
+            // Tentukan efek kecepatan dengan cubic-bezier
+            var object = {
+                x: Math.floor(Math.random() * 50) / 100,
+                y: Math.floor(Math.random() * 20) / 100
+            };
+            
+            // Berikan animasi baru untuk spin
+            setTimeout(function() {
+                $wheel.css({
+                    'transition': 'transform 6s cubic-bezier(0,' + object.x + ',' + object.y + ',1)', // Setel kembali transisi
+                    'transform': 'translate3d(-' + landingPosition + 'px, 0px, 0px)' // Terapkan posisi baru
+                });
+            }, 50); // Delay sedikit sebelum menerapkan animasi
+        }
+
+        // // Fungsi untuk mereset posisi roda
+        // function resetWheel() {
+        //     var $wheel = $('.roulette-wrapper .wheel');
+
+        //     // Reset posisi roda dan animasi
+        //     $wheel.css({
+        //         'transition': 'none', // Menghapus animasi transisi
+        //         'transform': 'translate3d(0, 0, 0)' // Kembalikan posisi roda ke posisi awal
+        //     });
+
+        //     // Membutuhkan sedikit waktu untuk merender ulang
+        //     setTimeout(function() {
+        //         // Mengaktifkan animasi kembali jika dibutuhkan untuk spin berikutnya
+        //         $wheel.css('transition', 'transform 6s cubic-bezier(0,0,0,1)');
+        //     }, 50);
+        // }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 </body>
 </html>
