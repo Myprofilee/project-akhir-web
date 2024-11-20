@@ -112,9 +112,11 @@
       <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-     
+    
+    @include('infiniteSlider')
   </header>
   <!--Main Navigation-->
+
   
 <script>
   document.addEventListener('DOMContentLoaded', () => {

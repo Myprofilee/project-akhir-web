@@ -98,6 +98,7 @@
 
         <div class="container mx-auto text-center mt-5">
             <div class="roulette-wrapper p-relative d-flex justify-content-center w-100 overflow-hidden mx-auto" >
+                {{-- garis tengah --}}
                 <div class="selector"></div>
                 <div class="wheel"></div>
             </div>
