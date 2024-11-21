@@ -7,7 +7,14 @@
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+  <style>
+    aside {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  </style>
 </head>
 <body class="bg-black">
     {{-- NAVBAR --}}
@@ -170,6 +177,19 @@
         </div>
       </div>
     </div>
+
+    {{-- tampilan samping --}}
+    <aside class="d-flex flex-column">
+      <a href="{{ route('spinner') }}">
+        <img src="https://images.linkcdn.cloud/global/icon-footer/spinwheel.webp" alt="" class="btn" type="button" width="100">
+      </a>
+      <a href="{{ route('slot') }}">
+        <img src="https://media.tenor.com/TLTHTLrWmHIAAAAj/jos257-situsterpercaya.gif" alt="" class="btn" type="button" width="100">
+      </a>
+      <a href="{{ route('gambling') }}">
+        <img src="https://i.gifer.com/origin/12/1267b8d856837b9fce217963d72dd8a1_w200.gif" alt="" class="btn" type="button" width="100">
+      </a>
+    </aside>
 
     @include('footer')
 

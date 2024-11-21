@@ -34,6 +34,10 @@ Route::get('game/slot', function () {
     return view('game/slot');
 })->name('slot');
 
+Route::get('game/spinner', function () {
+    return view('game/spinner');
+})->name('spinner');
+
 Route::get('berita', function () {
     return view('berita');
 })->name('berita');
