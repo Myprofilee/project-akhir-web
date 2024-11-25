@@ -90,6 +90,7 @@
                 <li><a class="dropdown-item btn" type="button" href="{{ route('gambling') }}">Arcade</a></li>
                 <li><a class="dropdown-item btn" type="button" href="{{ route('slot') }}">Loterry</a></li>
                 <li><a class="dropdown-item btn" type="button" href="{{ route('sport-bet') }}">Sport Bet</a></li>
+                <li><a class="dropdown-item btn" type="button" href="{{ route('roulette') }}">Game percobaan</a></li>
               </ul>
             </div>
             <li class="nav-item">
