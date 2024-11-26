@@ -55,6 +55,10 @@ Route::get('tentangkami', function () {
     return view('tentangkami');
 })->name('tentangkami');
 
+Route::get('tariktunai', function () {
+    return view('tariktunai');
+})->name('tariktunai');
+
 // Route::get('/', function() {
 //     return view('hai');
 // });
