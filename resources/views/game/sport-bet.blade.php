@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/Css_khusus.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<<<<<<< HEAD
     
     {{-- Spot Bet Styling --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -27,6 +28,8 @@
         margin: 5px 0;
       }
     </style>
+=======
+>>>>>>> f5f90488971c6a3ec81fa5126d6ed4bc06446f1f
 </head>
 <body class="bg-pan-left">
     @include('navbar')
@@ -41,10 +44,13 @@
                     <div class="container">
                       <h1 class="display-7">Jadwal Pertandingan</h1>
                     </div>
+<<<<<<< HEAD
                     {{-- List Sport-Bet --}}
                     <div id="score-list">
                         Loading scores...
                       </div>
+=======
+>>>>>>> f5f90488971c6a3ec81fa5126d6ed4bc06446f1f
                 </div>
             </div>
         </div>
@@ -105,6 +111,7 @@
                 </div>
 
                 {{-- range keuntungan --}}
+<<<<<<< HEAD
                 
                 <label for="customRange1" class="form-label d-flex justify-content-between align-items-center">
                     <span>Range Keuntungan</span>
@@ -112,6 +119,11 @@
                   </label>
                 <input type="range" class="form-range" id="customRange1" min="0" max="1000000" step="1000">
 
+=======
+                <label for="customRange1" class="form-label">Range Keuntungan</label>
+                <input type="range" class="form-range" id="customRange1">
+    
+>>>>>>> f5f90488971c6a3ec81fa5126d6ed4bc06446f1f
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -155,6 +167,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+<<<<<<< HEAD
 
     <script>
     const range = document.getElementById('customRange1');
@@ -224,5 +237,7 @@
           console.error('Error:', error);
         });
       </script>
+=======
+>>>>>>> f5f90488971c6a3ec81fa5126d6ed4bc06446f1f
 </body>
 </html>
