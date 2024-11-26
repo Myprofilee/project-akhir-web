@@ -12,7 +12,6 @@
               <img src="{{ asset('images/logo dgn tulisan.png') }}" alt=""  height="50">
             </a>
           </div>
-
   
           <!-- Search elements -->
           <div class="col-md-4 mt-2">
@@ -89,27 +88,22 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item btn" type="button" href="{{ route('gambling') }}">Arcade</a></li>
-                <li><a class="dropdown-item btn" type="button" href="#">Loterry</a></li>
+                <li><a class="dropdown-item btn" type="button" href="{{ route('slot') }}">Loterry</a></li>
                 <li><a class="dropdown-item btn" type="button" href="{{ route('sport-bet') }}">Sport Bet</a></li>
+                <li><a class="dropdown-item btn" type="button" href="{{ route('roulette') }}">Game percobaan</a></li>
               </ul>
             </div>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Berita</a>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('berita') }}">Berita</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('promo') }}">Promo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang Kami</a>
+              <a class="nav-link" href="{{ route('tentangkami') }}">Tentang Kami</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('hubungikami') }}">Hubungi Kami</a>
-<<<<<<< HEAD
-=======
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('home') }}">Home</a>
->>>>>>> 489a9191acdc4b65add20a692c0fad81bfa38fdf
             </li>
           </ul>
                   
@@ -119,9 +113,11 @@
       <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-     
+    
+    @include('infiniteSlider')
   </header>
   <!--Main Navigation-->
+
   
 <script>
   document.addEventListener('DOMContentLoaded', () => {

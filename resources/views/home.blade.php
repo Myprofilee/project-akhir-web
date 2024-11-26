@@ -7,14 +7,21 @@
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+  <style>
+    aside {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  </style>
 </head>
 <body class="bg-black">
     {{-- NAVBAR --}}
     @include('navbar')
 
     {{-- CAROUSEL --}}
-    <div id="CarouselSlot" class="carousel slide" data-bs-ride="carousel">
+    <div id="CarouselSlot" class="carousel slide mt-3" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#CarouselSlot" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#CarouselSlot" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -36,11 +43,11 @@
             <img src="{{ asset('images/Carousel slot 4.jpg') }}" class="d-block w-100" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#CarouselSlot" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#CarouselSlot" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -65,7 +72,7 @@
             <img src="https://res.cloudinary.com/rey0303/image/upload/v1727615283/judibola.xyz_dpavqm.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Sport Bet</h5>
-              <a href="/{{ route('sport-bet') }}" class="btn btn-primary">Go somewhere</a>
+              <a href="{{ route('sport-bet') }}" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
@@ -150,7 +157,7 @@
         <div class="col-md-2">
           <div class="card text-center btn btn-dark" type="button">
               <div class="image">
-                  <img src="https://images.linkcdn.cloud/global/payment/V2/IDR/epayment/gopay_color.webp" height="50" width="70">
+                  <img src="https://appmanager.seabank.co.id/seamoney/bke/app-manager/live/front_low_code/20230921/ea2515cefe5c4b4cb9e0776003124e0f.png" height="50" width="70">
               </div>
           </div>
           <div class="container">
@@ -170,6 +177,19 @@
         </div>
       </div>
     </div>
+
+    {{-- tampilan samping --}}
+    <aside class="d-flex flex-column">
+      <a href="{{ route('spinner') }}">
+        <img src="https://images.linkcdn.cloud/global/icon-footer/spinwheel.webp" alt="" class="btn" type="button" width="100">
+      </a>
+      <a href="{{ route('slot') }}">
+        <img src="https://media.tenor.com/TLTHTLrWmHIAAAAj/jos257-situsterpercaya.gif" alt="" class="btn" type="button" width="100">
+      </a>
+      <a href="{{ route('gambling') }}">
+        <img src="https://i.gifer.com/origin/12/1267b8d856837b9fce217963d72dd8a1_w200.gif" alt="" class="btn" type="button" width="100">
+      </a>
+    </aside>
 
     @include('footer')
 
