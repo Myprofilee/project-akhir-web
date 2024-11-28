@@ -13,7 +13,7 @@
             </a>
           </div>
   
-          <!-- Search elements -->
+          <!-- money elements -->
           <div class="col-md-4 mt-2">
             <h1 id="saldo" style="color:white;">Rp 0.</h1>
           </div>
@@ -22,43 +22,13 @@
           <!-- Right elements -->
           <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
-  
-              <!-- Notification -->
-              <div class="dropdown">
-                {{-- <a data-mdb-dropdown-init class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                  role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-bell-fill"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Some news</a></li>
-                  <li><a class="dropdown-item" href="#">Another news</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul> --}}
-              </div>
-
-              
               <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary justify-content-end" data-mdb-ripple-color="dark" type="button">
                 Download app<i class="fas fa-download ms-2"></i>
               </button>
-  
-              {{-- <!-- User -->
-              <div class="dropdown">
-                <a data-mdb-dropdown-init class="text-reset dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
-                  id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                  <img src="{{ asset('images/logo.png') }}" class="rounded-circle" height="22"
-                    alt="" loading="lazy" />
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink" id="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">My profile</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-              </div> --}}
             </div>
           </div>
           <!-- Right elements -->
+
         </div>
       </div>
     </div>
@@ -104,6 +74,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('hubungikami') }}">Hubungi Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('tariktunai') }}">Tarik tunai</a>
             </li>
           </ul>
                   

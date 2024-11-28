@@ -16,8 +16,8 @@
       <!-- Company profile -->
     <section class=" p-5 text-center">
       <h1 class="text-flicker-in-glow mb-4">Tentang Kami</h1>
-      <p class="lead">Perusahaan kami berdiri sejak tahun 2024 dan berfokus pada layanan digital untuk memenuhi kebutuhan pelanggan. Perusahaan kami saat ini memiliki 3 cabang dibidang yang berbeda yaitu e-commerce dengan Urban Store, hiburan Urban Games, dan 
-        dibidang ekonomi Urban Slot. Salah satu cabang kami yaitu Urban Slot berada dibawah naungan Urban Corporation yang terletak di Kota Surabaya, saat ini pengguna layanan kami telah mencapai 10.000 orang dan terus bertambah setiap tahunnya, oleh karena 
+      <p class="lead">Perusahaan kami berdiri sejak tahun 2024 dan berfokus pada layanan digital untuk memenuhi kebutuhan pelanggan. Perusahaan kami saat ini memiliki 3 cabang dibidang yang berbeda yaitu e-commerce dengan Urban Store, hiburan dengan Urban Games, dan 
+        dibidang ekonomi dengan Urban Slot. Salah satu cabang kami yaitu Urban Slot berada dibawah naungan Urban Corporation yang terletak di Kota Surabaya, saat ini pengguna layanan kami telah mencapai 10.000 orang dan terus bertambah setiap tahunnya, oleh karena 
         itu Kami berkomitmen untuk memberikan layanan berkualitas dengan tim yang berpengalaman. 
       </p>
 
