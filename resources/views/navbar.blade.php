@@ -15,7 +15,7 @@
   
           <!-- money elements -->
           <div class="col-md-4 mt-2">
-            <h1 id="saldo" style="color:white;">Rp 0.</h1>
+            <h1 style="color:white;">Rp {{ number_format(Auth::user()->saldo, 0, ',', '.') }}</h1>
           </div>
           <!-- search elements -->
   
@@ -23,7 +23,7 @@
           <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
               <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary justify-content-end" data-mdb-ripple-color="dark" type="button">
-                Download app<i class="fas fa-download ms-2"></i>
+                Download app  {{Auth::user()->username}}<i class="fas fa-download ms-2"></i>
               </button>
             </div>
           </div>
@@ -90,25 +90,3 @@
     @include('infiniteSlider')
   </header>
   <!--Main Navigation-->
-
-  
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const currentUrl = window.location.href;
-    const navLinks = document.querySelectorAll('.nav-item .nav-link');
-    
-    navLinks.forEach(link => {
-      if (currentUrl === link.href) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const balance = 10000;
-    const formattedBalance = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(balance);
-    document.getElementById("saldo").innerText = formattedBalance;
-  });
-</script>

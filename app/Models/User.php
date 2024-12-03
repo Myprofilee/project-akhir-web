@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
@@ -18,9 +16,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'username', 'password', 'phone', 'bank_account', 'account_name', 'email', 'saldo',
     ];
 
     /**
@@ -29,8 +25,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password',        // Password is hidden in serialization
+        'remember_token',  // Remember token is hidden in serialization
     ];
 
     /**
@@ -38,11 +34,39 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime', // Cast the email_verified_at field to a datetime instance
+    ];
+
+    /**
+     * Override the method to get the authentication identifier name.
+     * This will allow authentication to work with the `username` field.
+     *
+     * @return string
+     */
+    public function getAuthIdentifierName()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return 'username'; // Use the username as the authentication identifier
+    }
+
+    /**
+     * Handle password hashing before saving the user
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        // Automatically hash the password before saving the model
+        static::creating(function ($user) {
+            if ($user->password) {
+                $user->password = bcrypt($user->password); // Hash the password before storing it
+            }
+        });
+
+        static::updating(function ($user) {
+            if ($user->password) {
+                $user->password = bcrypt($user->password); // Hash the password before updating it
+            }
+        });
     }
 }

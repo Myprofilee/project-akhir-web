@@ -58,7 +58,7 @@
       <div class="position-relative">
           <img src="{{ asset('images/jackpot.gif') }}" class="img-fluid mt-3" alt="Animated GIF">
           <div id="counter" class="position-absolute top-50 start-50 translate-middle mt-3 mt-md-3 mt-lg-4 text-light fs-1 fs-md-2" style="font-family: fantasy">
-              IDR <span id="count">0</span>
+              IDR <span id="count">10 </span>
           </div>
       </div>
     </div>
@@ -72,7 +72,7 @@
             <img src="https://res.cloudinary.com/rey0303/image/upload/v1727615283/judibola.xyz_dpavqm.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Sport Bet</h5>
-              <a href="{{ route('sport-bet') }}" class="btn btn-primary">Go somewhere</a>
+              <a href="{{ route('sport-bet') }}" class="btn btn-primary">Play Now</a>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
             <img src="https://img.viva88athenae.com/pp/images/vs5triple8gold.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Slot</h5>
-              <a href="{{ route('slot') }}" class="btn btn-primary">Go somewhere</a>
+              <a href="{{ route('slot') }}" class="btn btn-primary">Play Now</a>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
             <img src="https://img.viva88athenae.com/mg/images/smg_treasurestacks_icon_square_250x250_en.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-light">Gambling</h5>
-              <a href="{{ route('gambling') }}" class="btn btn-primary">Go somewhere</a>
+              <a href="{{ route('gambling') }}" class="btn btn-primary">Play Now</a>
             </div>
           </div>
         </div>

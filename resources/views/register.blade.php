@@ -16,79 +16,92 @@
                 <h2 class="text-center mt-5 text-flicker-in-glow">Registration Form</h2>
                 <div class="card my-5" style="background-color: whitesmoke">
                     {{-- sementara agar halaman home dpt diakses pake action dan get method --}}
-                    <form class="card-body cardbody-color p-lg-5" action="{{ route('home') }}" method="GET" id="registrationForm">
+                    <form class="card-body cardbody-color p-lg-5" action="{{ route('register.store') }}" method="POST" id="registrationForm">
                         @csrf
                         
                         {{-- logo --}}
                         <div class="text-center">
-                        <img src="{{ asset('images/logo dgn tulisan.png') }}" class="img-fluid  "
-                            width="300px" alt="profile">
+                            <img src="{{ asset('images/logo dgn tulisan.png') }}" class="img-fluid" width="300px" alt="profile">
                         </div>
                         
                         {{-- input username --}}
                         <div class="mb-3 mt-5">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User Name" required>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="User Name" required>
                         </div>
-
+                    
                         {{-- input password --}}
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="password" placeholder="password" required minlength="8" maxlength="15">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required minlength="8" maxlength="15">
                         </div>
-
+                    
                         {{-- Konfirmasi password --}}
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="konfirmasi_password" placeholder="Konfirmasi password" required >
+                            <input type="password" class="form-control" id="konfirmasi_password" name="password_confirmation" placeholder="Konfirmasi Password" required>
                         </div>
-
+                    
                         {{-- input Nomor tel --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nomor Telp" required minlength="8" maxlength="12">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Nomor Telp" required minlength="8" maxlength="12">
                         </div>
-
+                    
                         {{-- input rekening bank --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="No Rekening Bank" required minlength="10" maxlength="16">
+                            <input type="text" class="form-control" id="bank_account" name="bank_account" placeholder="No Rekening Bank" required minlength="10" maxlength="16">
                         </div>
-
+                    
                         {{-- input nama rekening bank --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Nama Rekening Bank" required>
+                            <input type="text" class="form-control" id="bank_name" name="account_name" placeholder="Nama Rekening Bank" required>
                         </div>
-
+                    
                         {{-- input Email --}}
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Email @gmail.com">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email @gmail.com" required>
                         </div>
-
+                    
                         {{-- tombol login --}}
                         <div class="text-center mt-5">
-                            <button type="submit" class="btn btn-color px-5 w-100 text-light" style="background-color: #2b0b70" >Buat Akun</button>
+                            <button type="submit" class="btn btn-color px-5 w-100 text-light" style="background-color: #2b0b70">Buat Akun</button>
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Mencegah form dari submit otomatis
+       document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah form dari submit otomatis
 
-            // Mengambil nilai dari form password
-            var password = document.getElementById("password").value;
-            // mengambil nilai dari form konfirmasi password
-            var konfirmasiPassword = document.getElementById("konfirmasi_password").value;
+    // Mengambil nilai dari form
+    var password = document.getElementById("password").value;
+    var konfirmasiPassword = document.getElementById("konfirmasi_password").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
 
-            // Mengecek apakah password dan konfirmasi password cocok
-            if (password !== konfirmasiPassword) 
-            {
-                alert("Password dan konfirmasi password tidak cocok!");
-            } 
-            else 
-            {
-                this.submit(); // Submit form jika password dan konfirmasi pass cocok
-            }
-        });
+    // Validasi email
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Format email tidak valid!");
+        return;
+    }
+
+    // Validasi nomor telepon
+    if (phone.length < 8 || phone.length > 12 || isNaN(phone)) {
+        alert("Nomor telepon harus terdiri dari 8-12 angka!");
+        return;
+    }
+
+    // Validasi password dan konfirmasi password
+    if (password !== konfirmasiPassword) {
+        alert("Password dan konfirmasi password tidak cocok!");
+        return;
+    }
+
+    this.submit(); // Submit form jika semua validasi lolos
+});
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
